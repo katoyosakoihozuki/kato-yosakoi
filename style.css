@@ -1,12 +1,12 @@
 /* ==========================================================================
-   共通設定 & 和風テーマの定義
+   共通設定 & 和風テーマ（高級感アップ）
    ========================================================================== */
 :root {
-    --primary-color: #8B0000;  /* 深紅・えんじ色 */
+    --primary-color: #7D0000;  /* 深紅・えんじ色 */
     --accent-color: #D4AF37;   /* 金色 */
     --bg-color: #F7F5F0;       /* 生成り色（和風の美しい白） */
-    --text-color: #2B2B2B;     /* 墨色に近い黒 */
-    --dark-color: #0D0D0D;     /* 漆黒 */
+    --text-color: #333;        /* 墨色に近い黒 */
+    --dark-color: #1A1A1A;     /* 漆黒 */
 }
 
 * {
@@ -28,20 +28,41 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
-/* 和風セクションタイトル */
+/* 和風コンテンツボックス */
+.content-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+
+/* 和風カード（高級感） */
+.wafu-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border: 1px solid #ddd;
+    border-top: 3px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 和風セクションタイトル（フォント変更） */
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-family: 'Yuji Boku', serif; /* 崩し字風のフォント */
     position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
     color: var(--primary-color);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .section-title::after {
@@ -50,12 +71,12 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--accent-color);
 }
 
 /* ==========================================================================
-   ヘッダー（スマホ完全対応）
+   ヘッダー（スマホ対応）
    ========================================================================== */
 header {
     background-color: rgba(13, 13, 13, 0.95);
@@ -74,14 +95,15 @@ header {
 
 .logo {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-family: 'Yuji Boku', serif;
     letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 60%;
 }
 
 .nav-links a {
@@ -89,7 +111,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .nav-links a:hover {
@@ -136,7 +158,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
@@ -159,17 +181,17 @@ header {
 }
 
 .main-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: var(--accent-color);
-    letter-spacing: 10px;
+    letter-spacing: 12px;
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
 }
 
 /* 開いた瞬間用のアニメーション */
@@ -190,70 +212,85 @@ header {
    各セクション スタイル
    ========================================================================== */
 
-/* 開催概要（和風テーブル） */
+/* 開催概要 */
+.about-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.about-wafu-info {
+    flex: 2;
+}
+
 .wafu-table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .wafu-table th, .wafu-table td {
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
 .wafu-table th {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: rgba(125, 0, 0, 0.05);
+    color: var(--primary-color);
     width: 25%;
     text-align: center;
     font-weight: bold;
 }
 
-/* お知らせ */
-.news-list {
-    list-style: none;
-    background: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+.wafu-concept {
+    flex: 3;
 }
 
-.news-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+.wafu-concept h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* 会場紹介（変更点の反映） */
+.venue-flex {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.news-list li:last-child {
-    border-bottom: none;
+.venue-map {
+    flex: 2;
 }
 
-.news-list .date {
-    color: #777;
-    margin-right: 20px;
-    font-size: 0.9rem;
+.venue-map img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-.news-list .category {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 2px 10px;
-    font-size: 0.8rem;
-    margin-right: 20px;
-    border-radius: 3px;
-    font-weight: bold;
+.venue-area-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-/* タイムスケジュール（縦型タイムライン形式） */
-.timeline {
-    position: relative;
+.area-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* タイムスケジュール（和風タイムライン） */
+.timeline-container {
     max-width: 800px;
     margin: 0 auto;
-    padding-left: 30px;
+}
+
+.wafu-timeline {
+    position: relative;
+    padding-left: 40px;
     border-left: 2px dashed var(--accent-color);
 }
 
@@ -265,10 +302,10 @@ header {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -37px;
+    left: -48px;
     top: 5px;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: var(--primary-color);
     border: 2px solid var(--accent-color);
     border-radius: 50%;
@@ -277,18 +314,18 @@ header {
 .timeline-item .time {
     font-weight: bold;
     color: var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
 .timeline-item .content {
-    background: #fff;
+    background: rgba(125, 0, 0, 0.02);
     padding: 15px 20px;
     border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(125, 0, 0, 0.1);
 }
 
-/* 出演チーム（カード配置） */
+/* 出演チーム */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -296,11 +333,8 @@ header {
 }
 
 .team-card {
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary-color);
+    border-top: none;
+    padding: 0;
 }
 
 .team-img {
@@ -311,63 +345,65 @@ header {
 
 .team-info {
     padding: 20px;
+    border-top: 3px solid var(--primary-color);
 }
 
-.team-info h3 {
-    margin-bottom: 10px;
+/* 運営チーム・クラファン */
+.team-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.staff-intro, .crowdfunding {
+    flex: 1;
+}
+
+.staff-intro h3, .crowdfunding h3 {
+    margin-bottom: 15px;
     color: var(--primary-color);
 }
 
-/* Instagram */
-.sns-intro {
+.insta-link-box, .campfire-link-box {
     text-align: center;
-    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
-.insta-link-box {
-    text-align: center;
-}
-
-.insta-btn {
+.insta-btn, .campfire-btn {
     display: inline-block;
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: #fff;
-    padding: 12px 35px;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     transition: transform 0.3s;
 }
 
-.insta-btn:hover {
+.insta-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+}
+
+.campfire-btn {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    border: 1px solid var(--accent-color);
+}
+
+.insta-btn:hover, .campfire-btn:hover {
     transform: scale(1.05);
 }
 
-/* 協賛企業 */
-.sponsor-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.sponsor-item {
-    background: #fff;
-    padding: 15px 30px;
-    border: 1px solid #ddd;
-    font-weight: bold;
-    text-align: center;
-    min-width: 150px;
-}
-
-/* お問い合わせフォーム */
-.contact-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+/* お問い合わせ */
+.contact-box {
     max-width: 600px;
     margin: 0 auto;
+}
+
+.contact-form {
+    background: rgba(125, 0, 0, 0.02);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(125, 0, 0, 0.1);
 }
 
 .form-group {
@@ -417,7 +453,7 @@ footer {
 }
 
 /* ==========================================================================
-   スクロール連動アニメーション用の制御クラス
+   スクロール連動アニメーション
    ========================================================================== */
 .scroll-animate {
     opacity: 0;
@@ -431,9 +467,21 @@ footer {
 }
 
 /* ==========================================================================
-   画面幅が狭い時（スマホ）のレスポンシブ設定
+   レスポンシブ（スマホ）
    ========================================================================== */
 @media screen and (max-width: 768px) {
+    .container {
+        padding: 50px 0;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
     .nav-links {
         position: absolute;
         right: 0px;
@@ -448,11 +496,6 @@ footer {
         transition: transform 0.4s ease-in;
     }
 
-    .nav-links a {
-        font-size: 1.2rem;
-        margin: 15px 0;
-    }
-
     .burger {
         display: block;
     }
@@ -461,36 +504,23 @@ footer {
         transform: translateX(0%);
     }
 
-    /* ハンバーガーボタンが×になるアニメーション */
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .toggle .line2 {
-        opacity: 0;
-    }
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
-    /* テーブルを縦並びに変形 */
+    /* フレックス・グリッドの縦並び化 */
+    .about-flex, .venue-flex, .area-item img, .team-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .area-item img, .team-flex {
+        flex: 1;
+    }
+
     .wafu-table th, .wafu-table td {
         display: block;
         width: 100%;
         text-align: left;
-    }
-    .wafu-table th {
-        background-color: var(--primary-color);
-    }
-    
-    .news-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .news-list .category {
-        margin: 5px 0 10px 0;
     }
 }
