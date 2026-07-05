@@ -1,0 +1,7 @@
+body{margin:0;font-family:sans-serif;background:#faf7f2;color:#222}
+nav{position:fixed;top:0;width:100%;display:flex;gap:18px;justify-content:center;background:#111;padding:12px;z-index:9}
+nav a{color:#fff;text-decoration:none}
+.hero{height:100vh;background:url('images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+.overlay{background:rgba(0,0,0,.45);padding:30px;border-radius:12px;color:#fff;text-align:center}
+section{max-width:900px;margin:auto;padding:80px 20px;opacity:0;transform:translateY(40px);transition:.6s}
+section.show{opacity:1;transform:none}
