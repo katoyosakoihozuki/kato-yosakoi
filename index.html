@@ -6,7 +6,7 @@
     <title>加東によさこい！鬼灯祭り 公式サイト</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Yuji+Boku&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -18,9 +18,10 @@
             <h1 class="logo">鬼灯祭り</h1>
             <nav class="nav-links">
                 <a href="#about">開催概要</a>
-                <a href="#news">お知らせ</a>
+                <a href="#venue">会場紹介</a>
                 <a href="#schedule">スケジュール</a>
                 <a href="#teams">出演チーム</a>
+                <a href="#team">運営チーム</a>
                 <a href="#contact">お問い合わせ</a>
             </nav>
             <div class="burger">
@@ -34,142 +35,169 @@
     <section class="hero">
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/hero.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?q=80&w=1200');"></div>
-                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1542640244-7e672d6cef21?q=80&w=1200');"></div>
+                <div class="swiper-slide" style="background-image: url('images/yosakoi1.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('images/yosakoi2.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('images/yosakoi3.jpg');"></div>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-text animate-fade-in">
                 <h2>加東によさこい！</h2>
                 <p class="main-title">鬼灯祭り</p>
-                <p class="subtitle">〜 ホームページへようこそ 〜</p>
+                <p class="subtitle">〜 よさこいで地域を盛り上げたい 〜</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="scroll-animate">
-        <div class="container">
+    <section id="about" class="container scroll-animate">
+        <div class="content-box">
             <h2 class="section-title">開催概要</h2>
-            <div class="about-content">
-                <table class="wafu-table">
-                    <tr>
-                        <th>日時</th>
-                        <td>2026年 ○月○日（土） 10:00〜18:00</td>
-                    </tr>
-                    <tr>
-                        <th>場所</th>
-                        <td>兵庫県加東市 特設会場</td>
-                    </tr>
-                    <tr>
-                        <th>主催</th>
-                        <td>加東によさこい！鬼灯祭り実行委員会</td>
-                    </tr>
-                </table>
+            <div class="about-flex">
+                <div class="about-wafu-info wafu-card">
+                    <table class="wafu-table">
+                        <tr>
+                            <th>日時</th>
+                            <td>2026年 ○月○日（土）<br>10:00〜18:00</td>
+                        </tr>
+                        <tr>
+                            <th>場所</th>
+                            <td>兵庫県加東市 ステラパーク特設会場</td>
+                        </tr>
+                        <tr>
+                            <th>主催</th>
+                            <td>加東によさこい！鬼灯祭り実行委員会</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="wafu-concept wafu-card">
+                    <h3>鬼灯祭りの想い</h3>
+                    <p>「みんなによさこいを知ってもらいたい」「鬼灯のよさを活かした祭り」「自分たちもみんなも楽しい祭り」「地域活性化」...実行委員会メンバーの熱い想いが、ここステラパークで花開きます。よさこいの鳴子の音と、鬼灯のあかりが交差する、忘れられない一日を。</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="news" class="scroll-animate">
-        <div class="container">
-            <h2 class="section-title">お知らせ</h2>
-            <ul class="news-list">
-                <li>
-                    <span class="date">2026.07.05</span>
-                    <span class="category">重要</span>
-                    <p class="news-content">公式ホームページを開設いたしました！</p>
-                </li>
-                <li>
-                    <span class="date">2026.06.20</span>
-                    <span class="category">募集</span>
-                    <p class="news-content">ボランティアスタッフ・出演チームの募集を開始しました。</p>
-                </li>
-            </ul>
+    <section id="venue" class="container scroll-animate">
+        <div class="content-box">
+            <h2 class="section-title">会場紹介</h2>
+            <div class="venue-flex">
+                <div class="venue-map wafu-card">
+                    <img src="images/venue_stage.jpg" alt="ステラパークのステージエリア">
+                    <div class="venue-info">
+                        <h3>メインステージ</h3>
+                        <p>ステラパーク中央の池の前が、よさこい連の躍動する舞台となります。資料にあった360度囲む案は無しとなり、このステージを中心に演舞が繰り広げられます。</p>
+                    </div>
+                </div>
+                <div class="venue-area-grid">
+                    <div class="area-item wafu-card">
+                        <img src="images/venue_park1.jpg" alt="ステラパークの景色">
+                        <h4>屋台・交流エリア</h4>
+                        <p>駐車場や池の周辺には、地元の人気店や実行委員会オリジナルの屋台、ブースが並びます。演舞の合間に、美味しい食べ物や交流を楽しんでください。</p>
+                    </div>
+                    <div class="area-item wafu-card">
+                        <img src="images/venue_park2.jpg" alt="ステラパークの景色">
+                        <h4>給水・救護エリア</h4>
+                        <p>安心して楽しんでいただけるよう、給水所と救護本部を設置。熱中症対策、怪我などに配慮した、安全な祭り運営を目指します。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="schedule" class="scroll-animate">
-        <div class="container">
+    <section id="schedule" class="container scroll-animate">
+        <div class="content-box">
             <h2 class="section-title">タイムスケジュール</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">10:00</div>
-                    <div class="content">
-                        <h3>オープニングセレモニー</h3>
-                        <p>祭りの幕開け！総踊りでスタートします。</p>
+            <div class="timeline-container">
+                <div class="wafu-timeline wafu-card">
+                    <div class="timeline-item">
+                        <div class="time">10:00</div>
+                        <div class="content">
+                            <h4>オープニングセレモニー</h4>
+                            <p>鬼灯祭り、いよいよ開幕！実行委員会と総踊りでスタートします。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">11:00</div>
-                    <div class="content">
-                        <h3>各チーム演舞（前半）</h3>
-                        <p>全国から集まったよさこいチームによる熱い演舞が繰り広げられます。</p>
+                    <div class="timeline-item">
+                        <div class="time">11:00</div>
+                        <div class="content">
+                            <h4>出演チーム演舞（前半）</h4>
+                            <p>各地から集まったよさこい連が、メインステージで熱い演舞を披露。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">15:00</div>
-                    <div class="content">
-                        <h3>各チーム演舞（後半）</h3>
-                        <p>クライマックスに向けて会場のボルテージも最高潮に！</p>
+                    <div class="timeline-item">
+                        <div class="time">15:00</div>
+                        <div class="content">
+                            <h4>出演チーム演舞（後半）</h4>
+                            <p>さらにボルテージはアップ！感動のフィナーレへ。</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="time">17:30</div>
-                    <div class="content">
-                        <h3>総踊り・フィナーレ</h3>
-                        <p>会場全体が一つになる、感動のフィナーレをお見逃しなく！</p>
+                    <div class="timeline-item">
+                        <div class="time">17:30</div>
+                        <div class="content">
+                            <h4>総踊り・フィナーレ</h4>
+                            <p>会場全体が一つになる、鬼灯祭り自慢の総踊り！</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="teams" class="scroll-animate">
-        <div class="container">
+    <section id="teams" class="container scroll-animate">
+        <div class="content-box">
             <h2 class="section-title">出演チーム</h2>
             <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=500');"></div>
+                <div class="team-card wafu-card">
+                    <div class="team-img" style="background-image: url('images/yosakoi1.jpg');"></div>
                     <div class="team-info">
-                        <h3>播州よさこい連</h3>
-                        <p>地元の熱い想いを胸に、迫力ある演舞をお届けします！</p>
+                        <h3>コアハビッツ</h3>
+                        <p>よさこい連</p>
                     </div>
                 </div>
-                <div class="team-card">
-                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=500');"></div>
+                <div class="team-card wafu-card">
+                    <div class="team-img" style="background-image: url('images/yosakoi2.jpg');"></div>
                     <div class="team-info">
-                        <h3>鬼灯の舞</h3>
-                        <p>華麗な衣装と、息の合った美しい演舞にご注目ください。</p>
+                        <h3>たきっこ</h3>
+                        <p>よさこい連</p>
+                    </div>
+                </div>
+                <div class="team-card wafu-card">
+                    <div class="team-img" style="background-image: url('images/yosakoi3.jpg');"></div>
+                    <div class="team-info">
+                        <h3>オドルカド</h3>
+                        <p>よさこい連</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="instagram" class="scroll-animate">
-        <div class="container">
-            <h2 class="section-title">Instagram</h2>
-            <p class="sns-intro">最新情報や祭りの舞台裏は公式Instagramでも発信中！</p>
-            <div class="insta-link-box">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="insta-btn">
-                    <i class="fab fa-instagram"></i> @kato_hozuki_matsuri
-                </a>
+    <section id="team" class="container scroll-animate">
+        <div class="content-box">
+            <h2 class="section-title">運営チーム</h2>
+            <div class="team-flex">
+                <div class="staff-intro wafu-card">
+                    <h3>鬼灯祭り 実行委員会</h3>
+                    <p>「一から祭りを作りたい」というけんてぃーさん、みさとさんをはじめとするメンバー一人ひとりの熱い想い。役割分担からクラファン準備まで、 Bellsのメンバーが総力を挙げてこの祭りを盛り上げます。</p>
+                    <div class="insta-link-box">
+                        <a href="https://www.instagram.com/kato.hozuki_yosakoi/" target="_blank" rel="noopener noreferrer" class="insta-btn">
+                            <i class="fab fa-instagram"></i> 公式Instagram @kato.hozuki_yosakoi
+                        </a>
+                    </div>
+                </div>
+                <div class="crowdfunding wafu-card">
+                    <h3>クラウドファンディング</h3>
+                    <p>鬼灯祭りの開催、そしてリターン品の「提灯」による会場のライトアップ、オリジナルグッズ作成などの資金を CAMPFIRE で募集します（3月頃開始予定）。皆さんのご支援が、このお祭りをさらに輝かせます！</p>
+                    <div class="campfire-link-box">
+                        <a href="https://camp-fire.jp/" target="_blank" rel="noopener noreferrer" class="campfire-btn">
+                            <i class="fas fa-hand-holding-heart"></i> CAMPFIREで支援する（準備中）
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="sponsors" class="scroll-animate">
-        <div class="container">
-            <h2 class="section-title">協賛企業</h2>
-            <div class="sponsor-list">
-                <div class="sponsor-item">○○株式会社</div>
-                <div class="sponsor-item">△△商店</div>
-                <div class="sponsor-item">□□グループ</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="scroll-animate">
-        <div class="container">
+    <section id="contact" class="container scroll-animate">
+        <div class="content-box contact-box">
             <h2 class="section-title">お問い合わせ</h2>
             <form class="contact-form" onsubmit="return false;">
                 <div class="form-group">
