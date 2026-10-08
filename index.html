@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加東によさこい！鬼灯祭り 公式サイト</title>
-    <!-- Google Fonts -->
+    <title>加東によさ来い！鬼灯祭り 公式サイト</title>
+    <!-- Google Fonts (和風フォント) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Yuji+Boku&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Swiper CSS -->
+    <!-- Font Awesome (SNSアイコン・装飾用) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper CSS (スライドショー用) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- 自作のスタイルシート -->
+    <!-- スタイルシート -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ヘッダー（目次に「出店募集」「出演募集」を追加） -->
+    <!-- ヘッダー（目次ナビゲーション） -->
     <header>
         <div class="header-container">
             <h1 class="logo">鬼灯祭り</h1>
             <nav class="nav-links">
-                <a href="#about">開催概要</a>
-                <a href="#recruitment">募集案内</a>
-                <a href="https://forms.gle/ubtRFZKkRZSVCnsU6" target="_blank" rel="noopener noreferrer" class="nav-highlight">出店募集</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1oTTp3EcVQQWfDHPTgpcS_uFXKT0L1180N2JuIu-TFpVhyA/viewform" target="_blank" rel="noopener noreferrer" class="nav-highlight">出演募集</a>
-                <a href="#venue">会場紹介</a>
-                <a href="#schedule">スケジュール</a>
-                <a href="#teams">出演チーム</a>
-                <a href="#team">運営チーム</a>
+                <a href="#about">鬼灯祭りについて</a>
+                <a href="#thought">実行委員会の思い</a>
+                <a href="#overview">開催概要</a>
+                <a href="#schedule">タイムスケジュール</a>
+                <a href="#teams">出演団体情報</a>
+                <a href="#vendors">出店者情報</a>
+                <a href="#news">お知らせ</a>
+                <a href="#sponsors">協賛</a>
                 <a href="#contact">お問い合わせ</a>
             </nav>
-            <div class="burger">
+            <div class="burger" aria-label="メニューを開く">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -40,7 +40,7 @@
         </div>
     </header>
 
-    <!-- メインビジュアル -->
+    <!-- メインビジュアル（スライドショー） -->
     <section class="hero">
         <div class="swiper hero-slider">
             <div class="swiper-wrapper">
@@ -50,138 +50,136 @@
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-text animate-fade-in">
-                <h2>加東によさこい！</h2>
-                <p class="main-title">鬼灯祭り</p>
-                <p class="subtitle">〜 よさこいで地域を盛り上げたい 〜</p>
+                <p class="welcome-text">ホームページへようこそ！</p>
+                <h2 class="main-title">加東によさ来い！<br>鬼灯祭り</h2>
+                <p class="subtitle">〜 よさこいを中心に、加東市に新しい交流とにぎわいを 〜</p>
             </div>
         </div>
     </section>
 
-    <!-- 開催概要 -->
+    <!-- 1. 加東によさ来い！鬼灯祭りについて -->
     <section id="about" class="container scroll-animate">
         <div class="content-box">
-            <h2 class="section-title">開催概要</h2>
+            <h2 class="section-title">加東によさ来い！鬼灯祭りについて</h2>
             <div class="about-flex">
-                <div class="about-wafu-info wafu-card">
-                    <table class="wafu-table">
-                        <tr>
-                            <th>日時</th>
-                            <td>2026年 ○月○日（土）<br>10:00〜18:00</td>
-                        </tr>
-                        <tr>
-                            <th>場所</th>
-                            <td>兵庫県加東市 ステラパーク特設会場</td>
-                        </tr>
-                        <tr>
-                            <th>主催</th>
-                            <td>加東によさこい！鬼灯祭り実行委員会</td>
-                        </tr>
-                    </table>
+                <div class="about-text wafu-card">
+                    <h3>「踊る人・見る人・遊ぶ人・支える人」がひとつになる祭典</h3>
+                    <p>
+                        「加東市によさこいの文化を広げたい」という学生たちの想いから始まった、加東市発のよさこい祭りです。<br>
+                        本祭では、よさこい演舞を中心に、地域団体・子どもたち・学生・市民・出店者の皆さまが一堂に会し、地域に新しい交流とにぎわいを生み出します。
+                    </p>
                 </div>
-                <div class="wafu-concept wafu-card">
-                    <h3>鬼灯祭りの想い</h3>
-                    <p>「みんなによさこいを知ってもらいたい」「鬼灯のよさを活かした祭り」「自分たちもみんなも楽しい祭り」「地域活性化」...実行委員会メンバーの熱い想いが、ここステラパークで花開きます。よさこいの鳴子の音と、鬼灯のあかりが交差する、忘れられない一日を。</p>
+                <div class="about-sns-card wafu-card">
+                    <h3>公式SNSで最新情報を発信中！</h3>
+                    <p>準備風景や各種お知らせを更新しています。ぜひフォローしてください！</p>
+                    <div class="sns-buttons">
+                        <a href="https://www.instagram.com/katoniyosakoi.hozuki?igsh=aTRobjl2dzdwN2wz" target="_blank" rel="noopener noreferrer" class="sns-btn insta-btn">
+                            <i class="fab fa-instagram"></i> 公式 Instagram
+                        </a>
+                        <a href="https://x.com/katoniyosakoi?s=11&t=VagIvBQKKfJoeU5QZ1O9eg" target="_blank" rel="noopener noreferrer" class="sns-btn x-btn">
+                            <i class="fab fa-x-twitter"></i> 公式 X (旧Twitter)
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 新設：募集案内（出店・出演エントリー） -->
-    <section id="recruitment" class="container scroll-animate">
+    <!-- 2. 加東によさ来い！鬼灯祭り実行委員会の思い -->
+    <section id="thought" class="container scroll-animate">
         <div class="content-box">
-            <h2 class="section-title">募集案内</h2>
-            <p class="recruitment-lead">加東によさこい！鬼灯祭りでは、一緒に盛り上げてくださる出店者様および出演団体様を大募集しております！</p>
-            
-            <div class="recruitment-grid">
-                <!-- 出店者募集 -->
-                <div class="recruitment-card wafu-card">
-                    <div class="recruitment-badge">出店者募集</div>
-                    <h3>飲食・物販ブース出店</h3>
-                    <p>祭り会場を彩る美味しい飲食ブースや体験・物販ブースを募集しています。</p>
-                    <div class="qr-code-box">
-                        <img src="images/qr_vendor.png" alt="出店者募集フォーム QRコード" onerror="this.style.display='none'">
-                    </div>
-                    <a href="https://forms.gle/ubtRFZKkRZSVCnsU6" target="_blank" rel="noopener noreferrer" class="form-btn vendor-btn">
-                        <i class="fas fa-store"></i> 出店応募フォームはこちら
-                    </a>
-                </div>
-
-                <!-- 出演団体募集 -->
-                <div class="recruitment-card wafu-card">
-                    <div class="recruitment-badge">出演募集</div>
-                    <h3>よさこいチーム・演舞団体</h3>
-                    <p>ステラパーク特設ステージで熱い演舞を披露していただけるチームを募集しています。</p>
-                    <div class="qr-code-box">
-                        <img src="images/qr_performer.png" alt="出演団体募集フォーム QRコード" onerror="this.style.display='none'">
-                    </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1oTTp3EcVQQWfDHPTgpcS_uFXKT0L1180N2JuIu-TFpVhyA/viewform" target="_blank" rel="noopener noreferrer" class="form-btn performer-btn">
-                        <i class="fas fa-users"></i> 出演応募フォームはこちら
-                    </a>
+            <h2 class="section-title">加東によさ来い！鬼灯祭り実行委員会の思い</h2>
+            <div class="wafu-card concept-card">
+                <div class="concept-content">
+                    <p class="concept-lead">テーマ：「みんなによさこいを知ってもらいたい」</p>
+                    <ul class="thought-list">
+                        <li><i class="fas fa-seedling"></i> 鬼灯の良さを活かした祭りづくり</li>
+                        <li><i class="fas fa-smile-beam"></i> 自分たちも、来場する人も心から楽しめる祭り</li>
+                        <li><i class="fas fa-hands-helping"></i> 地域の人と人がつながるきっかけの場</li>
+                        <li><i class="fas fa-users"></i> 子どもから大人まで誰でも参加できる温かい空間</li>
+                    </ul>
+                    <p class="thought-body">
+                        「鬼灯の祭りだから行く」のではなく、「この祭りに行きたい！」と思って頂けるお祭りを目指しています。学生実行委員だけでなく、地域の皆さまや当日ボランティアの皆さまと手を携え、笑顔あふれる一日を一緒につくりあげていきます。
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 会場紹介 -->
-    <section id="venue" class="container scroll-animate">
+    <!-- 3. 開催概要 -->
+    <section id="overview" class="container scroll-animate">
         <div class="content-box">
-            <h2 class="section-title">会場紹介</h2>
-            <div class="venue-flex">
-                <div class="venue-map wafu-card">
-                    <img src="images/stage.jpg" alt="ステラパークの特設ステージ" onerror="this.src='https://via.placeholder.com/600x400?text=Stage'">
-                    <div class="venue-info">
-                        <h3>メインステージ</h3>
-                        <p>今回の演舞は、こちらの特設ステージを中心に行われます！開放的な空間で、迫力あるよさこいをお楽しみください。</p>
-                    </div>
-                </div>
-                <div class="venue-area-grid">
-                    <div class="area-item wafu-card">
-                        <img src="images/venue1.jpg" alt="ステラパーク 会場景色1" onerror="this.src='https://via.placeholder.com/300x200?text=Park1'">
-                        <h4>屋台・交流エリア</h4>
-                        <p>緑豊かなステラパークの敷地内に、地元の美味しいグルメが集結する屋台ブースや、オリジナルグッズの販売エリアが登場します！</p>
-                    </div>
-                    <div class="area-item wafu-card">
-                        <img src="images/venue2.jpg" alt="ステラパーク 会場景色2" onerror="this.src='https://via.placeholder.com/300x200?text=Park2'">
-                        <h4>安心・安全への取り組み</h4>
-                        <p>ご来場いただいた皆様が安心して楽しめるよう、広いスペースを活かした休憩エリアや給水所・救護本部をしっかり完備しています。</p>
-                    </div>
-                </div>
+            <h2 class="section-title">開催概要</h2>
+            <div class="wafu-card">
+                <table class="wafu-table">
+                    <tr>
+                        <th>イベント名</th>
+                        <td>第1回 加東によさ来い！鬼灯祭り</td>
+                    </tr>
+                    <tr>
+                        <th>開催日時</th>
+                        <td>2027年3月28日（日） 11:00 〜 17:00（予定） <span class="note">※小雨決行</span></td>
+                    </tr>
+                    <tr>
+                        <th>会場</th>
+                        <td>兵庫県加東市 社中央公園ステラパーク</td>
+                    </tr>
+                    <tr>
+                        <th>主催</th>
+                        <td>加東によさ来い！鬼灯祭り実行委員会</td>
+                    </tr>
+                    <tr>
+                        <th>想定来場規模</th>
+                        <td>約500人（地域住民を中心に、加東市内外からの来場を想定）</td>
+                    </tr>
+                    <tr>
+                        <th>入場料</th>
+                        <td>無料</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- タイムスケジュール -->
+    <!-- 4. タイムスケジュール -->
     <section id="schedule" class="container scroll-animate">
         <div class="content-box">
             <h2 class="section-title">タイムスケジュール</h2>
             <div class="timeline-container">
                 <div class="wafu-timeline wafu-card">
                     <div class="timeline-item">
-                        <div class="time">10:00</div>
-                        <div class="content">
-                            <h4>オープニングセレモニー</h4>
-                            <p>鬼灯祭り、いよいよ開幕！実行委員会と総踊りでスタートします。</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
                         <div class="time">11:00</div>
                         <div class="content">
-                            <h4>出演チーム演舞（前半）</h4>
-                            <p>各地から集まったよさこい連が、メインステージで熱い演舞を披露。</p>
+                            <h4>オープニング・開会式</h4>
+                            <p>鬼灯祭りがいよいよ開幕！開会宣言とオープニング演出でスタートします。</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time">15:00</div>
+                        <div class="time">11:15</div>
                         <div class="content">
-                            <h4>出演チーム演舞（後半）</h4>
-                            <p>さらにボルテージはアップ！感動のフィナーレへ。</p>
+                            <h4>出演団体演舞（第1部）</h4>
+                            <p>全国・各地から集まったよさこいチームおよびパフォーマンス団体による熱い演舞。</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time">17:30</div>
+                        <div class="time">13:00</div>
                         <div class="content">
-                            <h4>総踊り・フィナーレ</h4>
-                            <p>会場全体が一つになる、鬼灯祭り自慢の総踊り！</p>
+                            <h4>鬼灯ブース・屋台交流タイム</h4>
+                            <p>鳴子づくり体験や衣装体験ブース、おいしい屋台・キッチンカーをお楽しみいただけます。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">14:00</div>
+                        <div class="content">
+                            <h4>出演団体演舞（第2部）</h4>
+                            <p>ステージでの後半演舞ブロック。会場の熱気も最高潮へ！</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">16:30</div>
+                        <div class="content">
+                            <h4>総踊り・参加型企画＆フィナーレ</h4>
+                            <p>踊り子・来場者・スタッフ全員で踊る「正調よさこい」「うらじゃ」等の総踊りで結びます。</p>
                         </div>
                     </div>
                 </div>
@@ -189,93 +187,141 @@
         </div>
     </section>
 
-    <!-- 出演チーム -->
+    <!-- 5. 出演団体情報 -->
     <section id="teams" class="container scroll-animate">
         <div class="content-box">
-            <h2 class="section-title">出演チーム</h2>
-            <div class="team-grid">
-                <div class="team-card wafu-card">
-                    <div class="team-img" style="background-image: url('images/hero1.jpg');"></div>
-                    <div class="team-info">
-                        <h3>コアハビッツ</h3>
-                        <p>よさこい連</p>
-                    </div>
+            <h2 class="section-title">出演団体情報</h2>
+            
+            <!-- 出演団体募集カード -->
+            <div class="recruit-banner-card wafu-card">
+                <div class="recruit-badge">出演団体募集</div>
+                <h3>演舞で祭りを一緒に盛り上げてくださるチームを大募集！</h3>
+                <p>ステラパークの特設ステージで熱い演舞を披露しませんか？（全15チーム募集：よさこい枠10 / その他演舞枠5）</p>
+                
+                <div class="recruit-details-box">
+                    <p><strong>■ エントリー期間：</strong>10月8日 〜 11月30日（先着順）</p>
+                    <p><strong>■ 参加費：</strong>おひとり様 500円</p>
+                    <p><strong>■ 演舞条件：</strong>楽曲5分以内（入り〜捌け含め8分以内）/ 各チーム原則2回演舞</p>
                 </div>
-                <div class="team-card wafu-card">
-                    <div class="team-img" style="background-image: url('images/hero2.jpg');"></div>
-                    <div class="team-info">
-                        <h3>たきっこ</h3>
-                        <p>よさこい連</p>
-                    </div>
+
+                <div class="recruit-action">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1oTTp3EcVQQWfDHPTgpcS_uFXKT0L1180N2JuIu-TFpVhyA/viewform" target="_blank" rel="noopener noreferrer" class="action-btn performer-btn">
+                        <i class="fas fa-file-signature"></i> 出演団体 応募フォームはこちら
+                    </a>
                 </div>
-                <div class="team-card wafu-card">
-                    <div class="team-img" style="background-image: url('images/hero3.jpg');"></div>
-                    <div class="team-info">
-                        <h3>オドルカド</h3>
-                        <p>よさこい連</p>
-                    </div>
-                </div>
+            </div>
+
+            <h3 class="sub-heading">鬼灯ブース（体験型企画）</h3>
+            <div class="experience-grid">
+                <div class="wafu-card exp-item"><i class="fas fa-music"></i> 鳴子づくり体験</div>
+                <div class="wafu-card exp-item"><i class="fas fa-user-ninja"></i> よさこい衣装体験</div>
+                <div class="wafu-card exp-item"><i class="fas fa-paint-brush"></i> よさこいメイク体験</div>
+                <div class="wafu-card exp-item"><i class="fas fa-flag"></i> 旗振り体験・子ども企画</div>
             </div>
         </div>
     </section>
 
-    <!-- 運営チーム・クラファン情報 -->
-    <section id="team" class="container scroll-animate">
+    <!-- 6. 出店者情報 -->
+    <section id="vendors" class="container scroll-animate">
         <div class="content-box">
-            <h2 class="section-title">運営チーム</h2>
-            <div class="team-flex">
-                <div class="staff-intro wafu-card">
-                    <h3>鬼灯祭り 実行委員会</h3>
-                    <p>「一から祭りを作りたい」という実行委員会メンバー一人ひとりの熱い想い。役割分担からクラファン準備まで、Bellsのメンバーが総力を挙げてこの祭りを盛り上げます。</p>
-                    <div class="insta-link-box">
-                        <a href="https://www.instagram.com/kato.hozuki_yosakoi/" target="_blank" rel="noopener noreferrer" class="insta-btn">
-                            <i class="fab fa-instagram"></i> 公式Instagram @kato.hozuki_yosakoi
-                        </a>
-                    </div>
+            <h2 class="section-title">出店者情報</h2>
+            
+            <!-- 出店者募集カード -->
+            <div class="recruit-banner-card wafu-card vendor-theme">
+                <div class="recruit-badge">出店者募集</div>
+                <h3>グルメ・物販・体験ブースの出店者を募集しています！</h3>
+                <p>お祭りを賑やかに彩る飲食店、キッチンカー、地域団体、学生団体の皆様のご出店をお待ちしております。</p>
+
+                <div class="recruit-details-box">
+                    <p><strong>■ エントリー期間：</strong>10月8日 〜 11月30日（月）</p>
+                    <p><strong>■ 募集区分：</strong>一般屋台（約20団体）/ 有志屋台（約20団体）</p>
+                    <p><strong>■ 出店料：</strong>一般屋台 1,000円 / 有志屋台 無料</p>
                 </div>
-                <div class="crowdfunding wafu-card">
-                    <h3>クラウドファンディング</h3>
-                    <p>鬼灯祭りの開催、そしてリターン品の「提灯」による会場のライトアップ、オリジナルグッズ作成などの資金を CAMPFIRE で募集します（3月頃開始予定）。皆さんのご支援が、このお祭りをさらに輝かせます！</p>
-                    <div class="campfire-link-box">
-                        <a href="https://camp-fire.jp/" target="_blank" rel="noopener noreferrer" class="campfire-btn">
-                            <i class="fas fa-hand-holding-heart"></i> CAMPFIREで支援する（準備中）
-                        </a>
-                    </div>
+
+                <div class="recruit-action">
+                    <a href="https://forms.gle/ubtRFZKkRZSVCnsU6" target="_blank" rel="noopener noreferrer" class="action-btn vendor-btn">
+                        <i class="fas fa-store"></i> 出店者 応募フォームはこちら（Googleフォーム）
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- お問い合わせ -->
+    <!-- 7. お知らせ -->
+    <section id="news" class="container scroll-animate">
+        <div class="content-box">
+            <h2 class="section-title">お知らせ</h2>
+            <div class="news-list wafu-card">
+                <article class="news-item">
+                    <span class="news-date">2026.10.08</span>
+                    <span class="news-category recruit">募集開始</span>
+                    <p class="news-title">「第1回 加東によさ来い！鬼灯祭り」出演団体・出店者の募集を開始いたしました！（〜11/30まで）</p>
+                </article>
+                <article class="news-item">
+                    <span class="news-date">2026.10.01</span>
+                    <span class="news-category">クラファン</span>
+                    <p class="news-title">CAMPFIREでのクラウドファンディング支援金「521,000円」を達成いたしました！温かいご支援ありがとうございます。</p>
+                </article>
+                <article class="news-item">
+                    <span class="news-date">2026.09.15</span>
+                    <span class="news-category">お知らせ</span>
+                    <p class="news-title">公式サイトおよび公式SNS（Instagram / X）を開設いたしました。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. 協賛 -->
+    <section id="sponsors" class="container scroll-animate">
+        <div class="content-box">
+            <h2 class="section-title">協賛・ご支援</h2>
+            <div class="sponsor-content wafu-card">
+                <h3>地域とともに創るお祭りを目指して</h3>
+                <p>
+                    「加東によさ来い！鬼灯祭り」は、地域の皆さまや温かい企業・団体の皆さまのご協力・ご支援によって支えられています。
+                </p>
+                <div class="support-achieve">
+                    <h4>【支援・助成採択実績】</h4>
+                    <ul>
+                        <li>・クラウドファンディング（CAMPFIRE）：目標達成 521,000円</li>
+                        <li>・兵庫県青少年本部 助成採択</li>
+                        <li>・加東市 支援採択</li>
+                        <li>・兵庫教育大学 助成採択</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. お問い合わせ -->
     <section id="contact" class="container scroll-animate">
         <div class="content-box contact-box">
             <h2 class="section-title">お問い合わせ</h2>
-            <form class="contact-form" onsubmit="return false;">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" required placeholder="例：山田 太郎">
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス</label>
-                    <input type="email" id="email" required placeholder="例：example@mail.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">内容</label>
-                    <textarea id="message" rows="5" required placeholder="お問い合わせ内容をご記入ください"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">送信する</button>
-            </form>
+            <p class="contact-lead">
+                お祭りに関するご質問、出演・出店に関するお問い合わせは以下までお気軽にご連絡ください。
+            </p>
+            <div class="contact-info-card wafu-card">
+                <p class="contact-email"><i class="fas fa-envelope"></i> メールアドレス：<br><strong>kato.yosakoi.hozuki@gmail.com</strong></p>
+                <p class="contact-sns-note">※公式InstagramのDMからもお問い合わせを受け付けております。</p>
+            </div>
         </div>
     </section>
 
     <!-- フッター -->
     <footer>
-        <p>&copy; 2026 加東によさこい！鬼灯祭り実行委員会. All Rights Reserved.</p>
+        <div class="footer-sns">
+            <a href="https://www.instagram.com/katoniyosakoi.hozuki?igsh=aTRobjl2dzdwN2wz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/katoniyosakoi?s=11&t=VagIvBQKKfJoeU5QZ1O9eg" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2026-2027 加東によさ来い！鬼灯祭り実行委員会. All Rights Reserved.</p>
     </footer>
 
-    <!-- Swiper JS -->
+    <!-- JSライブラリ -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- 自作のJavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
