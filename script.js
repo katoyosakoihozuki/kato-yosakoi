@@ -3,41 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. スライドショー (Swiper)
     const swiper = new Swiper('.hero-slider', {
         loop: true,
-        effect: 'fade', // フェード
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
         autoplay: {
-            delay: 4000, // 4秒
+            delay: 4000,
             disableOnInteraction: false,
         },
-        speed: 1500, // 1.5秒
+        speed: 1500,
     });
 
-    // 2. スマホメニュー
+    // 2. スマホ用 ハンバーガーメニュー
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (nav.classList.contains('nav-active')) {
                 nav.classList.remove('nav-active');
-                burger.classList.remove('toggle');
             }
         });
     });
 
-    // 3. スクロールアニメーション
+    // 3. スクロールアニメーション (Intersection Observer)
     const animatedElements = document.querySelectorAll('.scroll-animate');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1 // 10%
-    };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -46,10 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    animatedElements.forEach(element => {
-        observer.observe(element);
+    }, {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.1
     });
+
+    animatedElements.forEach(el => observer.observe(el));
 
 });
