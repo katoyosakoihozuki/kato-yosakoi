@@ -1,12 +1,12 @@
 /* ==========================================================================
-   共通設定 & 和風テーマ
+   共通設定 & 和風デザインテーマ (深紅・漆黒・金色・生成り)
    ========================================================================== */
 :root {
-    --primary-color: #7D0000;  /* 深紅・えんじ色 */
-    --accent-color: #D4AF37;   /* 金色 */
-    --bg-color: #F7F5F0;       /* 生成り色 */
-    --text-color: #333;        /* 墨色 */
-    --dark-color: #1A1A1A;     /* 漆黒 */
+    --primary-color: #7D0000;  /* 漆朱・深紅 */
+    --accent-color: #C5A059;   /* 和金 */
+    --bg-color: #F8F6F0;       /* 生成り */
+    --text-color: #2b2b2b;     /* 墨色 */
+    --dark-color: #121212;     /* 漆黒 */
 }
 
 * {
@@ -27,39 +27,38 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: 92%;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 65px 0;
 }
 
 .content-box {
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
     border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    border: 1px solid #e3decb;
 }
 
 .wafu-card {
-    background: #fff;
-    padding: 20px;
+    background: #ffffff;
+    padding: 24px;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    border: 1px solid #ddd;
+    border: 1px solid #e0ddd3;
     border-top: 3px solid var(--primary-color);
     margin-bottom: 20px;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: 'Yuji Boku', serif;
     position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
+    padding-bottom: 18px;
+    margin-bottom: 40px;
     color: var(--primary-color);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .section-title::after {
@@ -68,17 +67,28 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent-color);
 }
 
+.sub-heading {
+    font-family: 'Yuji Boku', serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 30px 0 15px;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
 /* ==========================================================================
-   ヘッダー & ナビゲーション
+   ヘッダー (目次ナビ)
    ========================================================================== */
 header {
-    background-color: rgba(13, 13, 13, 0.95);
+    background-color: rgba(18, 18, 18, 0.95);
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1000;
     border-bottom: 2px solid var(--accent-color);
 }
@@ -87,48 +97,34 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 12px 3%;
 }
 
 .logo {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: 'Yuji Boku', serif;
     letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 0.8rem;
     font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 0.88rem;
+    padding: 4px 6px;
+    transition: color 0.3s;
     white-space: nowrap;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
-}
-
-/* 目立たせる募集メニューボタン */
-.nav-links a.nav-highlight {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 20px;
-    border: 1px solid var(--accent-color);
-}
-
-.nav-links a.nav-highlight:hover {
-    background-color: var(--accent-color);
-    color: var(--dark-color);
 }
 
 .burger {
@@ -149,7 +145,7 @@ header {
    ========================================================================== */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     overflow: hidden;
 }
@@ -162,7 +158,6 @@ header {
 .swiper-slide {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -171,224 +166,165 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     width: 90%;
 }
 
-.hero-text h2 {
-    font-size: 1.8rem;
-    letter-spacing: 6px;
+.welcome-text {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #f1f1f1;
     margin-bottom: 10px;
 }
 
 .main-title {
-    font-size: 4.5rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: 'Yuji Boku', serif;
     color: var(--accent-color);
-    letter-spacing: 12px;
+    letter-spacing: 6px;
     line-height: 1.3;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
 
 .subtitle {
-    font-size: 1.3rem;
-    letter-spacing: 3px;
-}
-
-.animate-fade-in {
-    opacity: 0;
-    transform: translate(-50%, -45%);
-    animation: fadeInCenter 1.5s ease forwards;
-}
-
-@keyframes fadeInCenter {
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }
 
 /* ==========================================================================
-   募集案内セクション（追加）
-   ========================================================================== */
-.recruitment-lead {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.05rem;
-}
-
-.recruitment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.recruitment-card {
-    text-align: center;
-    position: relative;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.recruitment-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-color);
-    color: #fff;
-    padding: 2px 16px;
-    font-size: 0.85rem;
-    border-radius: 12px;
-    font-weight: bold;
-    border: 1px solid var(--accent-color);
-}
-
-.recruitment-card h3 {
-    color: var(--primary-color);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-}
-
-.qr-code-box {
-    margin: 20px auto;
-    width: 160px;
-    height: 160px;
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.qr-code-box img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.form-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: transform 0.3s, background-color 0.3s;
-    margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.vendor-btn {
-    background-color: #1e73be;
-}
-
-.vendor-btn:hover {
-    background-color: #114b7f;
-    transform: translateY(-2px);
-}
-
-.performer-btn {
-    background-color: var(--primary-color);
-}
-
-.performer-btn:hover {
-    background-color: #520000;
-    transform: translateY(-2px);
-}
-
-/* ==========================================================================
-   各セクション（開催概要・会場・タイムライン等）
+   各コンテンツスタイル
    ========================================================================== */
 .about-flex {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
 }
 
-.about-wafu-info { flex: 2; }
+.about-text { flex: 3; }
+.about-sns-card { flex: 2; background: rgba(125, 0, 0, 0.02); }
+
+.sns-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sns-btn {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.insta-btn { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.x-btn { background-color: #000; border: 1px solid #444; }
+
+.thought-list {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.thought-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.thought-body { margin-top: 15px; }
+
+/* 開催概要テーブル */
 .wafu-table { width: 100%; border-collapse: collapse; }
-.wafu-table th, .wafu-table td { padding: 15px; border-bottom: 1px solid #ddd; }
-.wafu-table th { background-color: rgba(125, 0, 0, 0.05); color: var(--primary-color); width: 25%; text-align: center; font-weight: bold; }
-.wafu-concept { flex: 3; }
-.wafu-concept h3 { margin-bottom: 15px; color: var(--primary-color); }
+.wafu-table th, .wafu-table td { padding: 12px 15px; border-bottom: 1px solid #eee; }
+.wafu-table th { background: rgba(125, 0, 0, 0.04); color: var(--primary-color); width: 25%; text-align: center; }
+.note { font-size: 0.85rem; color: #888; }
 
-.venue-flex { display: flex; justify-content: space-between; gap: 30px; }
-.venue-map { flex: 2; }
-.venue-map img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; }
-.venue-area-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.area-item img { width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px; }
+/* タイムスケジュール */
+.wafu-timeline { position: relative; padding-left: 35px; border-left: 2px dashed var(--accent-color); }
+.timeline-item { position: relative; margin-bottom: 25px; }
+.timeline-item::before {
+    content: ''; position: absolute; left: -42px; top: 6px; width: 12px; height: 12px;
+    background: var(--primary-color); border: 2px solid var(--accent-color); border-radius: 50%;
+}
+.timeline-item .time { font-weight: bold; color: var(--primary-color); font-size: 1.2rem; }
+.timeline-item .content { background: rgba(125, 0, 0, 0.02); padding: 12px 18px; border-radius: 4px; }
 
-.timeline-container { max-width: 800px; margin: 0 auto; }
-.wafu-timeline { position: relative; padding-left: 40px; border-left: 2px dashed var(--accent-color); }
-.timeline-item { position: relative; margin-bottom: 40px; }
-.timeline-item::before { content: ''; position: absolute; left: -48px; top: 5px; width: 14px; height: 14px; background: var(--primary-color); border: 2px solid var(--accent-color); border-radius: 50%; }
-.timeline-item .time { font-weight: bold; color: var(--primary-color); font-size: 1.4rem; margin-bottom: 5px; }
-.timeline-item .content { background: rgba(125, 0, 0, 0.02); padding: 15px 20px; border-radius: 4px; border: 1px solid rgba(125, 0, 0, 0.1); }
+/* 募集要項カード */
+.recruit-banner-card { text-align: center; position: relative; padding: 30px 20px; background: #fffdfa; }
+.recruit-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--primary-color); color: #fff; padding: 2px 18px; font-size: 0.85rem; border-radius: 12px;
+}
+.recruit-details-box {
+    background: rgba(197, 160, 89, 0.1); padding: 15px; border-radius: 4px; margin: 15px 0; text-align: left;
+}
+.action-btn {
+    display: inline-block; padding: 12px 28px; color: #fff; text-decoration: none; font-weight: bold; border-radius: 25px;
+}
+.performer-btn { background-color: var(--primary-color); }
+.vendor-btn { background-color: #1e73be; }
 
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-gap: 30px; }
-.team-card { border-top: none; padding: 0; }
-.team-img { height: 200px; background-size: cover; background-position: center; }
-.team-info { padding: 20px; border-top: 3px solid var(--primary-color); }
+/* 体験ブース */
+.experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+.exp-item { text-align: center; font-weight: bold; border-top: none; border-left: 3px solid var(--accent-color); }
 
-.team-flex { display: flex; justify-content: space-between; gap: 30px; }
-.staff-intro, .crowdfunding { flex: 1; }
-.staff-intro h3, .crowdfunding h3 { margin-bottom: 15px; color: var(--primary-color); }
-.insta-link-box, .campfire-link-box { text-align: center; margin-top: 20px; }
-.insta-btn, .campfire-btn { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; }
-.insta-btn { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
-.campfire-btn { background-color: var(--accent-color); color: var(--dark-color); border: 1px solid var(--accent-color); }
-.insta-btn:hover, .campfire-btn:hover { transform: scale(1.05); }
+/* お知らせ */
+.news-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; gap: 12px; }
+.news-date { font-size: 0.85rem; color: #666; }
+.news-category { font-size: 0.75rem; padding: 2px 8px; background: #666; color: #fff; border-radius: 3px; }
+.news-category.recruit { background: var(--primary-color); }
 
-.contact-box { max-width: 600px; margin: 0 auto; }
-.contact-form { background: rgba(125, 0, 0, 0.02); padding: 30px; border-radius: 4px; border: 1px solid rgba(125, 0, 0, 0.1); }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
-.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
-.submit-btn { display: block; width: 100%; background-color: var(--primary-color); color: #fff; border: none; padding: 14px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
-.submit-btn:hover { background-color: var(--dark-color); }
+/* 協賛・支援 */
+.support-achieve { margin-top: 15px; background: rgba(125, 0, 0, 0.03); padding: 15px; border-radius: 4px; }
+.support-achieve ul { list-style: none; margin-top: 8px; }
 
-footer { background-color: var(--dark-color); color: #fff; text-align: center; padding: 25px; font-size: 0.85rem; border-top: 2px solid var(--accent-color); }
+/* お問い合わせ */
+.contact-box { max-width: 650px; margin: 0 auto; text-align: center; }
+.contact-info-card { margin-top: 20px; }
+.contact-email { font-size: 1.1rem; color: var(--primary-color); margin-bottom: 10px; }
 
-/* アニメーション */
-.scroll-animate { opacity: 0; transform: translateY(50px); transition: opacity 1s ease, transform 1s ease; }
+/* フッター */
+footer { background: var(--dark-color); color: #fff; text-align: center; padding: 25px 20px; border-top: 2px solid var(--accent-color); }
+.footer-sns { display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; }
+.footer-sns a { color: #fff; font-size: 1.4rem; }
+
+/* スクロールアニメーション */
+.scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .scroll-animate.show { opacity: 1; transform: translateY(0); }
 
-/* レスポンシブ */
+/* ==========================================================================
+   レスポンシブ (スマホ表示)
+   ========================================================================== */
 @media screen and (max-width: 900px) {
+    .container { padding: 45px 0; }
+    .content-box { padding: 20px; }
+    .main-title { font-size: 2.3rem; }
+    .about-flex { flex-direction: column; }
+    
     .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: rgba(13, 13, 13, 0.98);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in;
-        padding: 40px 0;
+        position: fixed; right: 0; top: 0; height: 100vh; background-color: rgba(18, 18, 18, 0.98);
+        display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;
+        transform: translateX(100%); transition: transform 0.3s ease-in-out; gap: 15px;
     }
-
-    .burger { display: block; }
+    .nav-links a { font-size: 1.05rem; }
+    .burger { display: block; z-index: 1001; }
     .nav-active { transform: translateX(0%); }
-    .main-title { font-size: 2.8rem; }
-    .about-flex, .venue-flex, .area-item img, .team-flex { flex-direction: column; gap: 20px; }
+
     .wafu-table th, .wafu-table td { display: block; width: 100%; text-align: left; }
+    .news-item { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
