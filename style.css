@@ -7,12 +7,14 @@
     --bg-color: #F8F6F0;       /* 生成り */
     --text-color: #2b2b2b;     /* 墨色 */
     --dark-color: #121212;     /* 漆黒 */
+    --font-family-mincho: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-family-mincho);
 }
 
 html {
@@ -20,10 +22,14 @@ html {
 }
 
 body {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-family-mincho);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.8;
+}
+
+button, input, textarea, select {
+    font-family: var(--font-family-mincho);
 }
 
 .container {
@@ -53,7 +59,8 @@ body {
 .section-title {
     text-align: center;
     font-size: 2rem;
-    font-family: 'Yuji Boku', serif;
+    font-family: var(--font-family-mincho);
+    font-weight: 700;
     position: relative;
     padding-bottom: 18px;
     margin-bottom: 40px;
@@ -72,8 +79,9 @@ body {
 }
 
 .sub-heading {
-    font-family: 'Yuji Boku', serif;
+    font-family: var(--font-family-mincho);
     font-size: 1.4rem;
+    font-weight: 700;
     color: var(--primary-color);
     margin: 30px 0 15px;
     border-bottom: 1px solid var(--accent-color);
@@ -103,7 +111,8 @@ header {
 .logo {
     color: #fff;
     font-size: 1.5rem;
-    font-family: 'Yuji Boku', serif;
+    font-family: var(--font-family-mincho);
+    font-weight: 700;
     letter-spacing: 2px;
 }
 
@@ -117,7 +126,8 @@ header {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: var(--font-family-mincho);
     padding: 4px 6px;
     transition: color 0.3s;
     white-space: nowrap;
@@ -181,10 +191,10 @@ header {
     width: 90%;
 }
 
-/* タイトルをより大きく強調 */
 .main-title {
     font-size: 4.8rem;
-    font-family: 'Yuji Boku', serif;
+    font-family: var(--font-family-mincho);
+    font-weight: 900;
     color: var(--accent-color);
     letter-spacing: 8px;
     line-height: 1.25;
@@ -194,6 +204,7 @@ header {
 
 .subtitle {
     font-size: 1.2rem;
+    font-family: var(--font-family-mincho);
     letter-spacing: 2px;
 }
 
@@ -221,7 +232,8 @@ header {
     padding: 10px 15px;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: var(--font-family-mincho);
     border-radius: 20px;
     font-size: 0.9rem;
 }
@@ -245,7 +257,7 @@ header {
 /* 開催概要テーブル */
 .wafu-table { width: 100%; border-collapse: collapse; }
 .wafu-table th, .wafu-table td { padding: 12px 15px; border-bottom: 1px solid #eee; }
-.wafu-table th { background: rgba(125, 0, 0, 0.04); color: var(--primary-color); width: 25%; text-align: center; }
+.wafu-table th { background: rgba(125, 0, 0, 0.04); color: var(--primary-color); width: 25%; text-align: center; font-weight: 700; }
 .note { font-size: 0.85rem; color: #888; }
 
 /* タイムスケジュール */
@@ -256,33 +268,33 @@ header {
     content: ''; position: absolute; left: -42px; top: 6px; width: 12px; height: 12px;
     background: var(--primary-color); border: 2px solid var(--accent-color); border-radius: 50%;
 }
-.timeline-item .time { font-weight: bold; color: var(--primary-color); font-size: 1.2rem; }
+.timeline-item .time { font-weight: 700; color: var(--primary-color); font-size: 1.2rem; }
 .timeline-item .content { background: rgba(125, 0, 0, 0.02); padding: 12px 18px; border-radius: 4px; }
-.timeline-item .content h4 { margin: 0; font-size: 1.1rem; }
+.timeline-item .content h4 { margin: 0; font-size: 1.1rem; font-weight: 700; }
 
 /* 募集要項カード */
 .recruit-banner-card { text-align: center; position: relative; padding: 30px 20px; background: #fffdfa; }
 .recruit-badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--primary-color); color: #fff; padding: 2px 18px; font-size: 0.85rem; border-radius: 12px;
+    background: var(--primary-color); color: #fff; padding: 2px 18px; font-size: 0.85rem; border-radius: 12px; font-weight: 700;
 }
 .recruit-details-box {
     background: rgba(197, 160, 89, 0.1); padding: 15px; border-radius: 4px; margin: 15px 0; text-align: left;
 }
 .action-btn {
-    display: inline-block; padding: 12px 28px; color: #fff; text-decoration: none; font-weight: bold; border-radius: 25px;
+    display: inline-block; padding: 12px 28px; color: #fff; text-decoration: none; font-weight: 700; font-family: var(--font-family-mincho); border-radius: 25px;
 }
 .performer-btn { background-color: var(--primary-color); }
 .vendor-btn { background-color: #1e73be; }
 
 /* 体験ブース */
 .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
-.exp-item { text-align: center; font-weight: bold; border-top: none; border-left: 3px solid var(--accent-color); margin-bottom: 0; }
+.exp-item { text-align: center; font-weight: 700; border-top: none; border-left: 3px solid var(--accent-color); margin-bottom: 0; }
 
 /* お知らせ */
 .news-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; gap: 12px; }
 .news-date { font-size: 0.85rem; color: #666; }
-.news-category { font-size: 0.75rem; padding: 2px 8px; background: #666; color: #fff; border-radius: 3px; }
+.news-category { font-size: 0.75rem; padding: 2px 8px; background: #666; color: #fff; border-radius: 3px; font-weight: 700; }
 .news-category.recruit { background: var(--primary-color); }
 
 /* 協賛・支援 */
