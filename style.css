@@ -272,7 +272,7 @@ header {
 .timeline-item .content { background: rgba(125, 0, 0, 0.02); padding: 12px 18px; border-radius: 4px; }
 .timeline-item .content h4 { margin: 0; font-size: 1.1rem; font-weight: 700; }
 
-/* 募集要項カード & 要項リンク */
+/* 募集要項カード & 写真セット表示 */
 .recruit-banner-card { text-align: center; position: relative; padding: 30px 20px; background: #fffdfa; }
 .recruit-badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
@@ -282,42 +282,77 @@ header {
     background: rgba(197, 160, 89, 0.1); padding: 15px; border-radius: 4px; margin: 15px 0; text-align: left;
 }
 
-/* 要項閲覧ボタンエリア */
-.doc-link-group {
+/* チラシ写真プレビューグループ */
+.flyer-preview-group {
     margin: 20px 0 15px;
     padding: 15px;
     background: #fdfbf7;
-    border: 1px dashed var(--accent-color);
+    border: 1px solid #e2ded0;
     border-radius: 4px;
 }
 
 .doc-link-title {
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 0.95rem;
 }
 
-.doc-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+.flyer-images-set {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.flyer-single-set {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.flyer-img-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flyer-img-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.flyer-img-link img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+
+.flyer-img-link span {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.doc-link-group {
+    margin: 15px 0 20px;
 }
 
 .doc-btn {
     display: inline-block;
-    padding: 8px 16px;
-    font-size: 0.85rem;
+    padding: 10px 20px;
+    font-size: 0.88rem;
     font-weight: 700;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.img-doc-btn {
-    background-color: var(--dark-color);
-    color: #fff;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .pdf-doc-btn {
@@ -328,45 +363,6 @@ header {
 .doc-btn:hover {
     transform: translateY(-2px);
     opacity: 0.9;
-}
-
-/* テキスト要項展開アコーディオン */
-.text-guidelines-accordion {
-    margin-bottom: 20px;
-    text-align: left;
-    background: #fff;
-    border: 1px solid #e0ddd3;
-    border-radius: 4px;
-}
-
-.text-guidelines-accordion summary {
-    padding: 12px 15px;
-    font-weight: 700;
-    color: var(--primary-color);
-    cursor: pointer;
-    background: rgba(125, 0, 0, 0.03);
-    user-select: none;
-}
-
-.accordion-content {
-    padding: 20px;
-    font-size: 0.9rem;
-    border-top: 1px solid #eee;
-    line-height: 1.7;
-}
-
-.accordion-content h4 {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 4px;
-}
-
-.accordion-content h5 {
-    font-size: 0.95rem;
-    color: var(--dark-color);
-    margin: 12px 0 4px;
 }
 
 .action-btn {
