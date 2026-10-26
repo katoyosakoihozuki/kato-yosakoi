@@ -180,15 +180,16 @@
                     <p><strong>■ 演舞条件：</strong>楽曲5分以内（入り〜捌け含め8分以内）/ 各チーム原則2回演舞</p>
                 </div>
 
-                <!-- 要項の閲覧・ダウンロードボタンエリア -->
+                <!-- 要項の閲覧ボタンエリア -->
                 <div class="doc-link-group">
                     <p class="doc-link-title">【募集要項の確認はこちら】</p>
                     <div class="doc-buttons">
-                        <button class="doc-btn img-doc-btn" onclick="openModal('performer-modal')">
-                            <i class="fas fa-image"></i> 写真
-                        </button>
+                        <!-- 写真を2枚開くJS関数を呼び出す -->
+                        <a href="javascript:void(0);" onclick="openPerformerImages()" class="doc-btn img-doc-btn">
+                            <i class="fas fa-image"></i> 📷 募集チラシ（写真）を見る
+                        </a>
                         <a href="performer_guidelines.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn pdf-doc-btn">
-                            <i class="fas fa-file-pdf"></i> 要項（PDF）
+                            <i class="fas fa-file-pdf"></i> 文章のみ要項（PDF）を見る
                         </a>
                     </div>
                 </div>
@@ -219,15 +220,15 @@
                     <p><strong>■ 出店料：</strong>一般屋台 1,000円 / 有志屋台 無料</p>
                 </div>
 
-                <!-- 要項の閲覧・ダウンロードボタンエリア -->
+                <!-- 要項の閲覧ボタンエリア -->
                 <div class="doc-link-group">
                     <p class="doc-link-title">【出店募集要項の確認はこちら】</p>
                     <div class="doc-buttons">
-                        <button class="doc-btn img-doc-btn" onclick="openModal('vendor-modal')">
-                            <i class="fas fa-image"></i> 写真
-                        </button>
+                        <a href="images/vendor_flyer.jpg" target="_blank" rel="noopener noreferrer" class="doc-btn img-doc-btn">
+                            <i class="fas fa-image"></i> 📷 募集チラシ（写真）を見る
+                        </a>
                         <a href="vendor_guidelines.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn pdf-doc-btn">
-                            <i class="fas fa-file-pdf"></i> 要項（PDF）
+                            <i class="fas fa-file-pdf"></i> 文章のみ要項（PDF）を見る
                         </a>
                     </div>
                 </div>
@@ -323,36 +324,8 @@
         <p>&copy; 2026-2027 加東によさ来い！鬼灯祭り実行委員会. All Rights Reserved.</p>
     </footer>
 
-    <!-- 写真ポップアップ用（モーダル） -->
-    <div id="performer-modal" class="modal" onclick="closeModal('performer-modal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="closeModal('performer-modal')">&times; 閉じる</span>
-            <img src="images/performer_flyer1.jpg" alt="出演要項1枚目">
-            <img src="images/performer_flyer2.jpg" alt="出演要項2枚目" style="margin-top:15px;">
-        </div>
-    </div>
-
-    <div id="vendor-modal" class="modal" onclick="closeModal('vendor-modal')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="closeModal('vendor-modal')">&times; 閉じる</span>
-            <img src="images/vendor_flyer.jpg" alt="出店要項">
-        </div>
-    </div>
-
     <!-- JSライブラリ -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    
-    <!-- モーダル用のスクリプト -->
-    <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
-            document.body.style.overflow = "hidden"; // 背景のスクロールを止める
-        }
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    </script>
 </body>
 </html>
