@@ -48,3 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 
 });
+
+// 画像を別タブで2枚同時に開く処理
+function openPerformerImages() {
+    window.open('images/performer_flyer1.jpg', '_blank');
+    window.open('images/performer_flyer2.jpg', '_blank');
+}
