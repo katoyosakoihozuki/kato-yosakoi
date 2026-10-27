@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome (SNSアイコン・装飾用) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Swiper CSS (スライドショー用) -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- スタイルシート -->
     <link rel="stylesheet" href="style.css">
@@ -50,6 +50,7 @@
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-text animate-fade-in">
+                <p class="welcome-text">ホームページへようこそ！</p>
                 <h2 class="main-title">加東によさ来い！<br>鬼灯祭り</h2>
                 <p class="subtitle">〜 よさこいを中心に、加東市に新しい交流とにぎわいを 〜</p>
             </div>
@@ -70,13 +71,12 @@
                 </div>
                 <div class="about-sns-card wafu-card">
                     <h3>公式SNSで最新情報を発信中！</h3>
-                    <p>準備風景や各種お知らせを更新しています。ぜひフォローしてください！</p>
                     <div class="sns-buttons">
                         <a href="https://www.instagram.com/katoniyosakoi.hozuki?igsh=aTRobjl2dzdwN2wz" target="_blank" rel="noopener noreferrer" class="sns-btn insta-btn">
                             <i class="fab fa-instagram"></i> 公式 Instagram
                         </a>
                         <a href="https://x.com/katoniyosakoi?s=11&t=VagIvBQKKfJoeU5QZ1O9eg" target="_blank" rel="noopener noreferrer" class="sns-btn x-btn">
-                            <i class="fab fa-x-twitter"></i> 公式 X (旧Twitter)
+                            <i class="fab fa-x-twitter"></i> 公式 X
                         </a>
                     </div>
                 </div>
@@ -97,9 +97,6 @@
                         <li><i class="fas fa-hands-helping"></i> 地域の人と人がつながるきっかけの場</li>
                         <li><i class="fas fa-users"></i> 子どもから大人まで誰でも参加できる温かい空間</li>
                     </ul>
-                    <p class="thought-body">
-                        「鬼灯の祭りだから行く」のではなく、「この祭りに行きたい！」と思って頂けるお祭りを目指しています。学生実行委員だけでなく、地域の皆さまや当日ボランティアの皆さまと手を携え、笑顔あふれる一日を一緒につくりあげていきます。
-                    </p>
                 </div>
             </div>
         </div>
@@ -128,10 +125,6 @@
                         <td>加東によさ来い！鬼灯祭り実行委員会</td>
                     </tr>
                     <tr>
-                        <th>想定来場規模</th>
-                        <td>約500人（地域住民を中心に、加東市内外からの来場を想定）</td>
-                    </tr>
-                    <tr>
                         <th>入場料</th>
                         <td>無料</td>
                     </tr>
@@ -148,15 +141,11 @@
                 <div class="wafu-timeline wafu-card">
                     <div class="timeline-item">
                         <div class="time">11:00</div>
-                        <div class="content">
-                            <h4>祭り開幕</h4>
-                        </div>
+                        <div class="content"><h4>祭り開幕</h4></div>
                     </div>
                     <div class="timeline-item">
                         <div class="time">17:00</div>
-                        <div class="content">
-                            <h4>祭り終了</h4>
-                        </div>
+                        <div class="content"><h4>祭り終了</h4></div>
                     </div>
                 </div>
             </div>
@@ -168,11 +157,9 @@
         <div class="content-box">
             <h2 class="section-title">出演団体情報</h2>
             
-            <!-- 出演団体募集カード -->
             <div class="recruit-banner-card wafu-card">
                 <div class="recruit-badge">出演団体募集</div>
                 <h3>演舞で祭りを一緒に盛り上げてくださるチームを大募集！</h3>
-                <p>ステラパークの特設ステージで熱い演舞を披露しませんか？（全15チーム募集：よさこい枠10 / その他演舞枠5）</p>
                 
                 <div class="recruit-details-box">
                     <p><strong>■ エントリー期間：</strong>10月8日 〜 11月30日（先着順）</p>
@@ -180,9 +167,22 @@
                     <p><strong>■ 演舞条件：</strong>楽曲5分以内（入り〜捌け含め8分以内）/ 各チーム原則2回演舞</p>
                 </div>
 
+                <!-- 写真・要項ボタン -->
+                <div class="doc-link-group">
+                    <div class="doc-buttons">
+                        <button onclick="openModal('performer-modal')" class="doc-btn img-doc-btn">
+                            <i class="fas fa-image"></i> 写真
+                        </button>
+                        <a href="performer_guidelines.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn pdf-doc-btn">
+                            <i class="fas fa-file-pdf"></i> 募集要項(PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 応募フォームへのリンク -->
                 <div class="recruit-action">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1oTTp3EcVQQWfDHPTgpcS_uFXKT0L1180N2JuIu-TFpVhyA/viewform" target="_blank" rel="noopener noreferrer" class="action-btn performer-btn">
-                        <i class="fas fa-file-signature"></i> 出演団体 応募フォームはこちら
+                        <i class="fas fa-file-signature"></i> 応募フォームはこちら
                     </a>
                 </div>
             </div>
@@ -194,11 +194,9 @@
         <div class="content-box">
             <h2 class="section-title">出店者情報</h2>
             
-            <!-- 出店者募集カード -->
             <div class="recruit-banner-card wafu-card vendor-theme">
                 <div class="recruit-badge">出店者募集</div>
                 <h3>グルメ・物販・体験ブースの出店者を募集しています！</h3>
-                <p>お祭りを賑やかに彩る飲食店、キッチンカー、地域団体、学生団体の皆様のご出店をお待ちしております。</p>
 
                 <div class="recruit-details-box">
                     <p><strong>■ エントリー期間：</strong>10月8日 〜 11月30日（月）</p>
@@ -206,14 +204,26 @@
                     <p><strong>■ 出店料：</strong>一般屋台 1,000円 / 有志屋台 無料</p>
                 </div>
 
+                <!-- 写真・要項ボタン -->
+                <div class="doc-link-group">
+                    <div class="doc-buttons">
+                        <button onclick="openModal('vendor-modal')" class="doc-btn img-doc-btn">
+                            <i class="fas fa-image"></i> 写真
+                        </button>
+                        <a href="vendor_guidelines.pdf" target="_blank" rel="noopener noreferrer" class="doc-btn pdf-doc-btn">
+                            <i class="fas fa-file-pdf"></i> 募集要項(PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 応募フォームへのリンク -->
                 <div class="recruit-action">
                     <a href="https://forms.gle/ubtRFZKkRZSVCnsU6" target="_blank" rel="noopener noreferrer" class="action-btn vendor-btn">
-                        <i class="fas fa-store"></i> 出店者 応募フォームはこちら
+                        <i class="fas fa-store"></i> 応募フォームはこちら
                     </a>
                 </div>
             </div>
 
-            <!-- 鬼灯ブース -->
             <h3 class="sub-heading">鬼灯ブース（体験型企画）</h3>
             <div class="experience-grid">
                 <div class="wafu-card exp-item"><i class="fas fa-music"></i> 鳴子づくり体験</div>
@@ -237,12 +247,7 @@
                 <article class="news-item">
                     <span class="news-date">2026.10.01</span>
                     <span class="news-category">クラファン</span>
-                    <p class="news-title">CAMPFIREでのクラウドファンディング支援金「521,000円」を達成いたしました！温かいご支援ありがとうございます。</p>
-                </article>
-                <article class="news-item">
-                    <span class="news-date">2026.09.15</span>
-                    <span class="news-category">お知らせ</span>
-                    <p class="news-title">公式サイトおよび公式SNS（Instagram / X）を開設いたしました。</p>
+                    <p class="news-title">CAMPFIREでのクラウドファンディング支援金「521,000円」を達成いたしました！</p>
                 </article>
             </div>
         </div>
@@ -254,18 +259,7 @@
             <h2 class="section-title">協賛・ご支援</h2>
             <div class="sponsor-content wafu-card">
                 <h3>地域とともに創るお祭りを目指して</h3>
-                <p>
-                    「加東によさ来い！鬼灯祭り」は、地域の皆さまや温かい企業・団体の皆さまのご協力・ご支援によって支えられています。
-                </p>
-                <div class="support-achieve">
-                    <h4>【支援・助成採択実績】</h4>
-                    <ul>
-                        <li>・クラウドファンディング（CAMPFIRE）：目標達成 521,000円</li>
-                        <li>・兵庫県青少年本部 助成採択</li>
-                        <li>・加東市 支援採択</li>
-                        <li>・兵庫教育大学 助成採択</li>
-                    </ul>
-                </div>
+                <p>「加東によさ来い！鬼灯祭り」は、地域の皆さまや温かい企業・団体の皆さまのご協力・ご支援によって支えられています。</p>
             </div>
         </div>
     </section>
@@ -274,12 +268,9 @@
     <section id="contact" class="container scroll-animate">
         <div class="content-box contact-box">
             <h2 class="section-title">お問い合わせ</h2>
-            <p class="contact-lead">
-                お祭りに関するご質問、出演・出店に関するお問い合わせは以下までお気軽にご連絡ください。
-            </p>
+            <p class="contact-lead">お祭りに関するご質問、出演・出店に関するお問い合わせは以下までお気軽にご連絡ください。</p>
             <div class="contact-info-card wafu-card">
-                <p class="contact-email"><i class="fas fa-envelope"></i> メールアドレス：<br><strong>kato.yosakoi.hozuki@gmail.com</strong></p>
-                <p class="contact-sns-note">※公式InstagramのDMからもお問い合わせを受け付けております。</p>
+                <p class="contact-email"><i class="fas fa-envelope"></i> <strong>kato.yosakoi.hozuki@gmail.com</strong></p>
             </div>
         </div>
     </section>
@@ -287,15 +278,33 @@
     <!-- フッター -->
     <footer>
         <div class="footer-sns">
-            <a href="https://www.instagram.com/katoniyosakoi.hozuki?igsh=aTRobjl2dzdwN2wz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://x.com/katoniyosakoi?s=11&t=VagIvBQKKfJoeU5QZ1O9eg" target="_blank" rel="noopener noreferrer" aria-label="X">
-                <i class="fab fa-x-twitter"></i>
-            </a>
+            <a href="https://www.instagram.com/katoniyosakoi.hozuki?igsh=aTRobjl2dzdwN2wz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/katoniyosakoi?s=11&t=VagIvBQKKfJoeU5QZ1O9eg" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
         </div>
         <p>&copy; 2026-2027 加東によさ来い！鬼灯祭り実行委員会. All Rights Reserved.</p>
     </footer>
+
+    <!-- ==========================================
+         画像ポップアップ（モーダル）エリア
+         ========================================== -->
+    
+    <!-- 出演団体の写真モーダル（2枚セット） -->
+    <div id="performer-modal" class="image-modal" onclick="closeModal('performer-modal')">
+        <span class="modal-close" onclick="closeModal('performer-modal')">&times;</span>
+        <div class="image-modal-content set-of-two" onclick="event.stopPropagation()">
+            <!-- 2枚の画像を並べて表示 -->
+            <img src="images/performer_flyer1.jpg" alt="出演要項1枚目">
+            <img src="images/performer_flyer2.jpg" alt="出演要項2枚目">
+        </div>
+    </div>
+
+    <!-- 出店者の写真モーダル（1枚） -->
+    <div id="vendor-modal" class="image-modal" onclick="closeModal('vendor-modal')">
+        <span class="modal-close" onclick="closeModal('vendor-modal')">&times;</span>
+        <div class="image-modal-content" onclick="event.stopPropagation()">
+            <img src="images/vendor_flyer.jpg" alt="出店要項">
+        </div>
+    </div>
 
     <!-- JSライブラリ -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
