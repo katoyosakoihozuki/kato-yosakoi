@@ -46,5 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     animatedElements.forEach(el => observer.observe(el));
-
 });
+
+// ==========================================
+// 写真ポップアップ（モーダル）を開閉する関数
+// ==========================================
+function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'flex';
+    // 背面のスクロールを禁止
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+    // 背面のスクロールを許可
+    document.body.style.overflow = 'auto';
+}
